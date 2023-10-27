@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "bff77b1a-e6ac-4551-b737-1536cfd9a1d8",
+		"name": "FSND-Capstone Heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12167988"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Actors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Knightley\",\n\t\"date_of_birth\": \"March 26, 1985\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Keira Christina Knightley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/37"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/37"
+					},
+					"response": []
+				},
+				{
+					"name": "Movies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edge of Tomorrow\",\n\t\"duration\": 113,\n\t\"release_year\": 2014,\n\t\"imdb_rating\": 7.9,\n\t\"cast\": [\"Tom Cruise\", \"Emily Blunt\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imdb_rating\": 8.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/17"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/17"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDE0NiwiZXhwIjoxNjk4NTA2NTQ2LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8iLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.kPliXr1p4XjZJIir6N-lo06SPwUNpIMylbYUAxED0bx_sEB2ni8PnCAU-sNhJazdmY-CyXUBEY12RajmcqY3bm6PfpNELHIjv0RdBsog9GnsdvI7ObZgFLduSjTgEm7Rf7vye6IQoBOyTdSwIqKfOX4Tbr5ReYZXLMYz4LI-2sMMM34a1Kv__kEE8QRwcapzf8i7d1Lf-EGBQBe4pdosFUYxw6A-WwANDU3OO6U7KgFdhXPCRxegWHRFweBEw07VNBA789irB_JSNovqGasqEDQQZRTtT0Kr6j2JkPLM9QRqYG11ntJnxx0_imys2mev8r7v-x48EizPPwNnGSzdmw"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Manager",
+			"item": [
+				{
+					"name": "Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/2"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Knightley\",\n\t\"date_of_birth\": \"March 26, 1985\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Keira Christina Knightley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/38"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/38"
+					},
+					"response": []
+				},
+				{
+					"name": "Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edge of Tomorrow\",\n\t\"duration\": 113,\n\t\"release_year\": 2014,\n\t\"imdb_rating\": 7.9,\n\t\"cast\": [\"Tom Cruise\", \"Emily Blunt\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imdb_rating\": 8.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/18"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/18"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDI4OCwiZXhwIjoxNjk4NTA2Njg4LCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8gcGF0Y2g6YWN0b3IgcGF0Y2g6bW92aWUgcG9zdDphY3RvciBwb3N0Om1vdmllIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.BYDhu5EO1uSmkCmUVTQnq1itfkSZy7q8A270OCz8b9xDC2H4Mc0x9-BJ1etPao2nlBVJ57KrzStPrr63buIO6U1Vv7JsxcvpkYbL_JbcN204er4pfcvCuAzepXG_yr5mUSqWXg90rRZ_WPSlt1EHFdXA1gXubQc24hRkj6JmWvTTMzOZCrpaqjJ7Ew5jYSYsl0aeb3F0lXFA9iPDZyrNuw8cqBhW12e6zBJI_jjfJnG5qkaj4u1lADxRcuny7wtQfkf7RoGxC3wsTNn3aYF09BJr77DSObUaQEPun082Bs-foOW1p1IPW8u4uwXWIyWwhsN_T7jsrei7ECw4RdGmtQ"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Actors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Keira Knightley\",\n\t\"date_of_birth\": \"March 26, 1985\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"full_name\": \"Keira Christina Knightley\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/39"
+					},
+					"response": []
+				},
+				{
+					"name": "Actor",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/actors/39"
+					},
+					"response": []
+				},
+				{
+					"name": "Movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Edge of Tomorrow\",\n\t\"duration\": 113,\n\t\"release_year\": 2014,\n\t\"imdb_rating\": 7.9,\n\t\"cast\": [\"Tom Cruise\", \"Emily Blunt\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"imdb_rating\": 8.0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/19"
+					},
+					"response": []
+				},
+				{
+					"name": "Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "https://ry-fsnd-capstone.herokuapp.com/movies/19"
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InhLT2FKUWVBbVpaNnFwYlV4SG5HRiJ9.eyJpc3MiOiJodHRwczovL2Rldi1lYnFhaHd1dmlveXk3ZmJ0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2akBjbGllbnRzIiwiYXVkIjoiZnNuZC1jYXBzdG9uZSIsImlhdCI6MTY5ODQyMDM1MCwiZXhwIjoxNjk4NTA2NzUwLCJhenAiOiJJVlhLVHRIdFZBZlRBa200bVlWOTNEVzZoNkRSb2U2aiIsInNjb3BlIjoiZ2V0OmFjdG9ycyBnZXQ6YWN0b3JzLWluZm8gZ2V0Om1vdmllcyBnZXQ6bW92aWVzLWluZm8gcGF0Y2g6YWN0b3IgcGF0Y2g6bW92aWUgcG9zdDphY3RvciBwb3N0Om1vdmllIGRlbGV0ZTphY3RvciBkZWxldGU6bW92aWUiLCJndHkiOiJjbGllbnQtY3JlZGVudGlhbHMifQ.QrSvKhpMJgEu_6ZjH9YU0mEWOM1dPUI-CTsQMtf0rtVdZVxj6vegoVTEolToXxHd5iJlxXjB0Iey4XnLM9yGN_czWqSYq0cb9bqpVnj2XXWwjKIWzkbt_CZ2P1awQn0AM1L6w93kr9OhUmmEnF_BmneGrLivJNEz0mz7ImT_MnHseYJ8B0wAsQUstGebDO0pGO2dsvN1QBbisUvctjVaSoyQroYLSK5ADxx3086aMYtH3WcP1KaaVFNEXGxwlW6HSuX0ff0cCrGMukpZQkYlqKV4A2YTmluePl5GmecH-G5dOReDPv3r_uBz66Iz83UrIWjwOmCJQ0ilbwKnuDLyJQ"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://ry-fsnd-capstone.herokuapp.com"
+			},
+			"response": []
+		}
+	]
+}
