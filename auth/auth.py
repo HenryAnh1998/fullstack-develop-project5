@@ -48,7 +48,6 @@ def get_token_auth_header():
 
 
 def check_permissions(permission, payload):
-    print(payload)
     if 'permissions' not in payload:
         raise AuthError({
             'code': 'invalid_claims',
