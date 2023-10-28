@@ -48,6 +48,7 @@ def get_token_auth_header():
 
 
 def check_permissions(permission, payload):
+    print(payload)
     if 'permissions' not in payload:
         raise AuthError({
             'code': 'invalid_claims',
@@ -64,7 +65,7 @@ def check_permissions(permission, payload):
 
 
 def verify_decode_jwt(token):
-    url_string = "https://{}/.well-known/jwks.json".format(AUTH0_DOMAIN)
+    url_string = f"https://{AUTH0_DOMAIN}/.well-known/jwks.json"
     json_url = urlopen(url_string)
     jwks = json.loads(json_url.read())
     unverified_header = jwt.get_unverified_header(token)
