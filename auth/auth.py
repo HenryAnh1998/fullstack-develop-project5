@@ -1,6 +1,7 @@
 import json
 from flask import request, abort
 from functools import wraps
+from jose.jwt import JWTError, decode, encode
 
 from jose import jwt
 from urllib.request import urlopen

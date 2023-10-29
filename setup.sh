@@ -1,4 +1,4 @@
-export AUTH0_DOMAIN='dev-ebqahwuvioyy7fbt.us.auth0.com'
+export AUTH0_DOMAIN='localhost:8080'
 export ALGORITHMS=['RS256']
 export API_AUDIENCE='fsnd-capstone'
 export CLIENT_ID='NhHAEKbOzOHsE46x3NhU1eh5ftTFUPKJ'
