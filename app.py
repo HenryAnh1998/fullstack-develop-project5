@@ -1,17 +1,17 @@
 from flask_cors import CORS
 from flask import Flask, request, jsonify, abort
-from .database.models import db_drop_and_create_all, setup_db, Actor, Movie
-from .auth.auth import AuthError, requires_auth
+import database.models
+import auth.auth
 
 
 def create_app(test_config=None):
     app = Flask(__name__)
-    setup_db(app)
+    database.models.setup_db(app)
 
     # Uncomment the following line on the initial run to setup
     # the required tables in the database
     with app.app_context():
-        db_drop_and_create_all()
+        database.models.db_drop_and_create_all()
 
     CORS(app, resources={r"/*": {"origins": "*"}})
 
@@ -28,9 +28,9 @@ def create_app(test_config=None):
         return jsonify({'health': 'Running!!'}), 200
 
     @app.route('/actors')
-    @requires_auth("get:actors")
+    @auth.auth.requires_auth("get:actors")
     def get_actors(payload):
-        actors_query = Actor.query.order_by(Actor.id).all()
+        actors_query = database.models.Actor.query.order_by(database.models.Actor.id).all()
         actors = [actor.short() for actor in actors_query]
 
         return jsonify({
@@ -39,9 +39,9 @@ def create_app(test_config=None):
         }), 200
 
     @app.route('/actors/<int:actor_id>')
-    @requires_auth("get:actors-info")
+    @auth.auth.requires_auth("get:actors-info")
     def get_actor_by_id(payload, actor_id):
-        actor = Actor.query.get_or_404(actor_id)
+        actor = database.models.Actor.query.get_or_404(actor_id)
 
         return jsonify({
             "success": True,
@@ -49,7 +49,7 @@ def create_app(test_config=None):
         }), 200
 
     @app.route('/actors', methods=['POST'])
-    @requires_auth("post:actor")
+    @auth.auth.requires_auth("post:actor")
     def create_actor(payload):
         try:
             request_body = request.get_json()
@@ -65,7 +65,7 @@ def create_app(test_config=None):
             if 'full_name' in request_body:
                 full_name = request_body["full_name"]
 
-            new_actor = Actor(request_body['name'], full_name,
+            new_actor = database.models.Actor(request_body['name'], full_name,
                               request_body['date_of_birth'])
             new_actor.insert()
 
@@ -81,9 +81,9 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/actors/<int:actor_id>', methods=['PATCH'])
-    @requires_auth("patch:actor")
+    @auth.auth.requires_auth("patch:actor")
     def update_actor(payload, actor_id):
-        actor = Actor.query.get_or_404(actor_id)
+        actor = database.models.Actor.query.get_or_404(actor_id)
 
         try:
             request_body = request.get_json()
@@ -122,9 +122,9 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/actors/<int:actor_id>', methods=['DELETE'])
-    @requires_auth("delete:actor")
+    @auth.auth.requires_auth("delete:actor")
     def delete_actor(payload, actor_id):
-        actor = Actor.query.get_or_404(actor_id)
+        actor = database.models.Actor.query.get_or_404(actor_id)
 
         try:
             actor.delete()
@@ -138,9 +138,9 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/movies')
-    @requires_auth("get:movies")
+    @auth.auth.requires_auth("get:movies")
     def get_movies(payload):
-        movies_query = Movie.query.order_by(Movie.id).all()
+        movies_query = database.models.Movie.query.order_by(database.models.Movie.id).all()
         movies = [movie.short() for movie in movies_query]
 
         return jsonify({
@@ -149,9 +149,9 @@ def create_app(test_config=None):
         }), 200
 
     @app.route('/movies/<int:movie_id>')
-    @requires_auth("get:movies-info")
+    @auth.auth.requires_auth("get:movies-info")
     def get_movie_by_id(payload, movie_id):
-        movie = Movie.query.get_or_404(movie_id)
+        movie = database.models.Movie.query.get_or_404(movie_id)
 
         return jsonify({
             "success": True,
@@ -159,7 +159,7 @@ def create_app(test_config=None):
         }), 200
 
     @app.route('/movies', methods=['POST'])
-    @requires_auth("post:movie")
+    @auth.auth.requires_auth("post:movie")
     def create_movie(payload):
         try:
             request_body = request.get_json()
@@ -179,14 +179,14 @@ def create_app(test_config=None):
                     or len(request_body["cast"]) == 0:
                 raise TypeError
 
-            new_movie = Movie(
+            new_movie = database.models.Movie(
                 request_body['title'],
                 request_body['release_year'],
                 request_body['duration'],
                 request_body['imdb_rating']
             )
-            actors = Actor.query.filter(
-                Actor.name.in_(request_body["cast"])).all()
+            actors = database.models.Actor.query.filter(
+                database.models.Actor.name.in_(request_body["cast"])).all()
 
             if len(request_body["cast"]) == len(actors):
                 new_movie.cast = actors
@@ -206,9 +206,9 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/movies/<int:movie_id>', methods=['PATCH'])
-    @requires_auth("patch:movie")
+    @auth.auth.requires_auth("patch:movie")
     def update_movie(payload, movie_id):
-        movie = Movie.query.get_or_404(movie_id)
+        movie = database.models.Movie.query.get_or_404(movie_id)
 
         try:
             request_body = request.get_json()
@@ -244,8 +244,8 @@ def create_app(test_config=None):
                 if len(request_body["cast"]) == 0:
                     raise ValueError
 
-                actors = Actor.query.filter(
-                    Actor.name.in_(request_body["cast"])).all()
+                actors = database.models.Actor.query.filter(
+                    database.models.Actor.name.in_(request_body["cast"])).all()
 
                 if len(request_body["cast"]) == len(actors):
                     movie.cast = actors
@@ -266,9 +266,9 @@ def create_app(test_config=None):
             abort(500)
 
     @app.route('/movies/<int:movie_id>', methods=['DELETE'])
-    @requires_auth("delete:movie")
+    @auth.auth.requires_auth("delete:movie")
     def delete_movie(payload, movie_id):
-        movie = Movie.query.get_or_404(movie_id)
+        movie = database.models.Movie.query.get_or_404(movie_id)
 
         try:
             movie.delete()
