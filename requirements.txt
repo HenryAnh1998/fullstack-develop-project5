@@ -87,7 +87,6 @@ tomlkit==0.12.1
 typed-ast==1.5.5
 typing_extensions==4.8.0
 urllib3==1.25.8
-usb-creator==0.3.7
 uvicorn==0.11.3
 wadllib==1.3.3
 websockets==8.1
