@@ -79,7 +79,6 @@ toml==0.10.2
 tomli==2.0.1
 tomlkit==0.12.1
 typed-ast==1.5.5
-typing_extensions==4.8.0
 ufw==0.36
 unattended-upgrades==0.1
 urllib3==1.25.8
