@@ -4,7 +4,7 @@ import os
 
 database_name = "postgres"
 database_path = "postgresql://{}:{}@{}/{}".format(
-    'udacity', 'Udacity2023', 'project-capstone.cr4k1pvdfzui.us-east-2.rds.amazonaws.com:5432', database_name)
+    'capstone', 'g5KQ4StYtgGnT7WGmmAnh2LkkBxOcZH7', 'dpg-ckv6htq37rbc73f0cu90-a.singapore-postgres.render.com:5432', database_name)
 # database_path = os.environ['DATABASE_URL']
 
 db = SQLAlchemy()
