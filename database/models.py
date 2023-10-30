@@ -3,8 +3,6 @@ from flask_sqlalchemy import SQLAlchemy
 import os
 
 database_name = "capstone_okki"
-# database_path = "postgresql://{}:{}@{}/{}".format(
-#     'capstone', 'g5KQ4StYtgGnT7WGmmAnh2LkkBxOcZH7', 'dpg-ckv6htq37rbc73f0cu90-a.singapore-postgres.render.com:5432', database_name)
 database_path = os.environ['DATABASE_URL']
 
 db = SQLAlchemy()
@@ -34,6 +32,10 @@ actor_in_movie = db.Table(
 )
 
 
+def update():
+    db.session.commit()
+
+
 class Movie(db.Model):
     __tablename__ = "movies"
 
@@ -57,9 +59,6 @@ class Movie(db.Model):
 
     def delete(self):
         db.session.delete(self)
-        db.session.commit()
-
-    def update(self):
         db.session.commit()
 
     def short(self):
@@ -91,6 +90,10 @@ class Movie(db.Model):
                                               self.imdb_rating, self.duration)
 
 
+def update():
+    db.session.commit()
+
+
 class Actor(db.Model):
     __tablename__ = "actors"
 
@@ -110,9 +113,6 @@ class Actor(db.Model):
 
     def delete(self):
         db.session.delete(self)
-        db.session.commit()
-
-    def update(self):
         db.session.commit()
 
     def short(self):
