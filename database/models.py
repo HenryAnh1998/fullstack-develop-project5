@@ -2,10 +2,10 @@ from sqlalchemy import Column, String, Integer, ForeignKey, Float, Date
 from flask_sqlalchemy import SQLAlchemy
 import os
 
-database_name = "postgres"
-database_path = "postgresql://{}:{}@{}/{}".format(
-    'capstone', 'g5KQ4StYtgGnT7WGmmAnh2LkkBxOcZH7', 'dpg-ckv6htq37rbc73f0cu90-a.singapore-postgres.render.com:5432', database_name)
-# database_path = os.environ['DATABASE_URL']
+database_name = "capstone_okki"
+# database_path = "postgresql://{}:{}@{}/{}".format(
+#     'capstone', 'g5KQ4StYtgGnT7WGmmAnh2LkkBxOcZH7', 'dpg-ckv6htq37rbc73f0cu90-a.singapore-postgres.render.com:5432', database_name)
+database_path = os.environ['DATABASE_URL']
 
 db = SQLAlchemy()
 
