@@ -19,3 +19,4 @@ SQLAlchemy==1.4.18
 Werkzeug==2.0.1
 jose==1.0.0
 python-jose==3.3.0
+pyOpenSSL==23.3.0
